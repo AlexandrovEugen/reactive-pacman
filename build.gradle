@@ -16,6 +16,7 @@ subprojects {
 
 	repositories {
 		jcenter()
+		mavenLocal()
 		mavenCentral()
 		maven { url 'https://jitpack.io' }
 		maven { url 'https://repo.spring.io/snapshot' }
@@ -35,6 +36,7 @@ subprojects {
 		dependencies {
 
 			dependencySet (group: 'io.rsocket.rpc', version: '0.2.20-SNAPSHOT') {
+				entry 'rsocket-ipc-core'
 				entry 'rsocket-rpc-core'
 				entry 'rsocket-rpc-protobuf'
 				entry 'rsocket-rpc-protobuf-idl'
